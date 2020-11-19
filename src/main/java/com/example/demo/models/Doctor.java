@@ -5,9 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "doctors")
 
-public class Doctors {
+public class Doctor {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
 
@@ -23,11 +23,11 @@ public class Doctors {
     @Column(name = "specialization")
     private String specialization;
 
-    public Doctors(){
+    public Doctor(){
 
     }
 
-    public Doctors(int id, String firstName,String middleName, String lastName, String specialization){
+    public Doctor(int id, String firstName, String middleName, String lastName, String specialization){
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
